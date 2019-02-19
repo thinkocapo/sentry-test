@@ -15,11 +15,13 @@
       <p>Numbers will work better</p>
       <label>
         <input type="text" class="form-control"
-                [value]="'foo'"/>
+          [(ngModel)]="number1" 
+          [value]="'foo'"/>
       </label>
       <strong>X</strong>
       <label>
           <input type="text" class="form-control"
+          [(ngModel)]="number2" 
           [value]="'bar'"/>
       </label>
       <strong>=</strong>
@@ -28,7 +30,7 @@
       </label>
     </div>
     <div class="col-12">
-        <button class="btn btn-primary">Submit</button>
+        <button (click)="submit()" type="button" class="btn btn-primary">Submit</button>
     </div>
   </div>
 </div>
