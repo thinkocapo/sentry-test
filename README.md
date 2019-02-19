@@ -1,5 +1,10 @@
 # sentry test
 
+1. added Sentry cdn `<script>` to `src/index.html`
+2. added Error producing code to `<script>` in `src/index.html`
+3. added error in ....click button...
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 5.3.0
 

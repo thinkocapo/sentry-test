@@ -9,19 +9,22 @@
   <link rel="manifest" href="manifest.json"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  
+  <script src="https://browser.sentry-cdn.com/4.6.1/bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Sentry.init(
+    //   {
+    //     dsn: ''
+    //   }
+    // );
+  </script>
+  <script>
+    // console.log('say hello to Sentry', Sentry)
+    // var obj = {};
+    // obj.invalidFunction(); // errors and reports to Sentry
+  </script>
 </head>
 <body>
-  <!--[if lt IE 10]>
-  <p>
-    You are using an <strong>outdated</strong> browser.
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-  </p>
-  <![endif]-->
-  <noscript>
-    <p>
-      This page requires JavaScript to work properly. Please enable JavaScript in your browser.
-    </p>
-  </noscript>
   <app-root></app-root>
 </body>
 </html>
