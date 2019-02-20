@@ -25,10 +25,9 @@ export class HomeComponent implements OnInit {
 
   // Sentry - runtime error captured by Sentry
   doTheImpossible() {
-    this.error1 = false
-    this.error2 = true
+    this.setErrorText(false, true)
     let x = {}
-    return x['y']
+    return x['y']['z']
   }
 
   // Sentry - error deliberately thrown during runtime and captured by Sentry
@@ -38,12 +37,17 @@ export class HomeComponent implements OnInit {
 
     if (isNaN(value1) || isNaN(value2)) {
       this.output = '?'
-      this.error1 = true
-      this.error2 = false
-      throw `Deliberately thrown Error for input values ${this.value1} and ${this.value2}`
+      this.setErrorText(true, false)
+      throw new Error(`Deliberately thrown Error for input values ${this.value1} and ${this.value2}`) 
     } else {
       this.output = (value1 * value2).toString()
+      this.setErrorText(false, false)
     }
+  }
+
+  setErrorText(error1: boolean, error2: boolean) {
+    this.error1 = error1
+    this.error2 = error2
   }
 
 }
