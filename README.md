@@ -1,10 +1,15 @@
 # sentry test
 
-1. added Sentry cdn `<script>` to `src/index.html`
-2. added Error producing code to `<script>` in `src/index.html`
-3. added error in ....click button...
+### Instructions
+1. git clone git@github.com:thinkocapo/sentry-test.git; cd sentry-test
+2. paste API key in src/environmments/environment.ts in the sentry dsn (Data Source Name) field. This is used in src/app/app.module.ts for initializing Sentry
+3. npm install
+4. npm start
+5. username: admin, password: admin
+6. Submit words to the math function to trigger Sentry. Or click the Error button. Check the POST requests sent to Sentry in Dev Tools (Chrome)
+7. Go to sentry.io > Projects > Your_Project > Issues to find the errors captured
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// readme from ngx-rocket app generator /////////////////////////////////////////////////////////
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 5.3.0
 
