@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   setErrorText(error1: boolean, error2: boolean) {
     this.error1 = error1
     this.error2 = error2
-    console.log('check sentry...')
+    if (this.error1 || this.error2) console.log('check sentry...')
   }
 
 }
