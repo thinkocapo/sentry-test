@@ -5,32 +5,28 @@
       <span>Sentry Test!</span>
     </h1>
     <app-loader [isLoading]="isLoading"></app-loader>
-    <!-- <q [hidden]="isLoading">Stop hoping your users will report errors</q> -->
-    <q [hidden]="isLoading">Errors are your first chance to iterate</q>
-
+    <q [hidden]="isLoading">Stop hoping your users will report errors</q>
   </div>
 
   <div class="row text-center">
     <div class="col-12">
 
-      <!-- <div class="math-container"> -->
-        <p>Two strings will throw a handled error</p>
-        <p class="marign-bottom">Numbers will work better</p>
-        <label>
+      <p>Two strings will throw a handled error</p>
+      <p class="marign-bottom">Numbers will work better</p>
+      <label>
+        <input type="text" class="form-control"
+          [(ngModel)]="value1">
+      </label>
+      <strong>x</strong>
+      <label>
           <input type="text" class="form-control"
-            [(ngModel)]="value1">
-        </label>
-        <strong>x</strong>
-        <label>
-            <input type="text" class="form-control"
-            [(ngModel)]="value2"/>
-        </label>
-        <strong>=</strong>
-        <label>
-          <input type="text" class="form-control" disabled="disabled"
-          [(ngModel)]="output"/>
-        </label>
-      <!-- </div> -->
+          [(ngModel)]="value2"/>
+      </label>
+      <strong>=</strong>
+      <label>
+        <input type="text" class="form-control" disabled="disabled"
+        [(ngModel)]="output"/>
+      </label>
 
     <div class="col-12">
         <button (click)="submit()" type="button" class="btn btn-primary margin-top">Submit</button>
@@ -48,9 +44,3 @@
 
   </div>
 </div>
-
-<!-- <span hidden>Username</span> -->
-<!-- <small [hidden]="loginForm.controls.username.valid || loginForm.controls.username.untouched"
-        class="text-danger" translate>
-  Username is required
-</small> -->

@@ -18,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import * as Sentry from "@sentry/browser";
 
+console.log('say hello to Sentry object in src/app/app.module.ts', Sentry)
+
 Sentry.init({
   dsn: environment.sentry.dsn
 });

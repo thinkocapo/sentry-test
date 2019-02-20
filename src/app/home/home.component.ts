@@ -17,20 +17,18 @@ export class HomeComponent implements OnInit {
   error1 = false;
   error2 = false;
 
-  error1Style = "{'visibility': hidden}"
-
   constructor() { }
 
   ngOnInit() {}
 
-  // Sentry - runtime error captured by Sentry
+  // Sentry - Runtime error captured by Sentry
   doTheImpossible() {
     this.setErrorText(false, true)
     let x = {}
     return x['y']['z']
   }
 
-  // Sentry - error deliberately thrown during runtime and captured by Sentry
+  // Sentry - Runtime error deliberately thrown and captured by Sentry
   submit() {
     const value1 = parseInt(this.value1)
     const value2 = parseInt(this.value2)
