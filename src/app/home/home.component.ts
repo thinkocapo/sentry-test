@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
-import { QuoteService } from './quote.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,22 +8,28 @@ import { QuoteService } from './quote.service';
 })
 export class HomeComponent implements OnInit {
 
-  quote: string;
   isLoading: boolean;
-  number1: number;
-  number2: number;
+  value1 = "foo";
+  value2 = "bar";
 
-  constructor(private quoteService: QuoteService) { }
+  constructor() { }
 
-  ngOnInit() {
-    // this.isLoading = true;
-    // this.quoteService.getRandomQuote({ category: 'dev' })
-    //   .pipe(finalize(() => { this.isLoading = false; }))
-    //   .subscribe((quote: string) => { this.quote = quote; });
+  ngOnInit() {}
+
+  // Sentry - runtime error captured by Sentry
+  doTheImpossible() {
+    let x = {}
+    return x['y']
   }
 
+  // Sentry - error deliberately thrown during runtime and captured by Sentry
   submit() {
-    console.log('submit', this.number1, this.number2)
+    const value1 = parseInt(this.value1)
+    const value2 = parseInt(this.value2)
+
+    if (isNaN(value1) || isNaN(value2)) {
+      throw 'Deliberately thrown Error'
+    }
   }
 
 }
