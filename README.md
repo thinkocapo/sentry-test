@@ -3,6 +3,14 @@
 ### Instructions
 1. git clone git@github.com:thinkocapo/sentry-test.git; cd sentry-test
 2. paste API key in src/environmments/environment.ts in the sentry dsn (Data Source Name) field. This is used in src/app/app.module.ts for initializing Sentry
+```
+export const environment = {
+  ...,
+  sentry: {
+    dsn: '<DATA_SOURCE_NAME>'
+  }
+};
+```
 3. npm install
 4. npm start
 5. username: admin, password: admin
