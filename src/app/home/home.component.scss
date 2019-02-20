@@ -2,8 +2,20 @@
   width: 100px;
 }
 
-q {
-  font-style: italic;
-  font-size: 1.2rem;
-  quotes: "« " " »";
+.form-control:disabled, .form-control[readonly] {
+  background-color: white;
+  opacity: 1;
+}
+
+.alert-text {
+  color: red;
+  font-size: 0.75em;
+}
+
+.margin-bottom {
+  margin-bottom: 2.0rem;
+}
+
+.margin-top {
+  margin-top: 1.0rem;
 }

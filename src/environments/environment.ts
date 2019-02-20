@@ -13,7 +13,10 @@ export const environment = {
   supportedLanguages: [
     'en-US',
     'fr-FR'
-  ]
+  ],
+  sentry: {
+    dsn: 'https://411481aa537343f1b10ae4b13df52608@sentry.io/1397009'
+  }
 };
 
 /*

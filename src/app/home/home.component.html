@@ -1,40 +1,46 @@
 <div class="container-fluid">
   <div class="jumbotron text-center">
     <h1>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
+      <img class="logo" src="assets/sentry-glyph-black.png" alt="angular logo"/>
       <span>Sentry Test!</span>
-      <!-- <span translate>Hello world !</span> -->
     </h1>
     <app-loader [isLoading]="isLoading"></app-loader>
-    <q [hidden]="isLoading">Lets cause an error</q>
+    <q [hidden]="isLoading">Stop hoping your users will report errors</q>
   </div>
 
   <div class="row text-center">
     <div class="col-12">
-      <p>Two strings will throw an error</p>
-      <p>Numbers will work better</p>
+
+      <p>Two strings will throw a handled error</p>
+      <p class="marign-bottom">Numbers will work better</p>
       <label>
         <input type="text" class="form-control"
           [(ngModel)]="value1">
       </label>
-      <strong>X</strong>
+      <strong>x</strong>
       <label>
           <input type="text" class="form-control"
           [(ngModel)]="value2"/>
       </label>
       <strong>=</strong>
       <label>
-        <p>?</p>
+        <input type="text" class="form-control" disabled="disabled"
+        [(ngModel)]="output"/>
       </label>
+
+    <div class="col-12">
+        <button (click)="submit()" type="button" class="btn btn-primary margin-top">Submit</button>
+        <p *ngIf="error1" class="alert-text">check sentry</p>
+        <p *ngIf="!error1" class="alert-text">&nbsp;</p>
+    </div>
+
+    <p class="margin-bottom">Or produce an error with 1 click...</p>
+    <div class="col-12">
+        <button (click)="doTheImpossible()" type="button" class="btn btn-primary">Error</button>
     </div>
     <div class="col-12">
-        <button (click)="submit()" type="button" class="btn btn-primary align">Submit</button>
+      <p *ngIf="error2" class="alert-text">check sentry</p>
     </div>
+
   </div>
 </div>
-
-<!-- <span hidden>Username</span> -->
-<!-- <small [hidden]="loginForm.controls.username.valid || loginForm.controls.username.untouched"
-        class="text-danger" translate>
-  Username is required
-</small> -->
