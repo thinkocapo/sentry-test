@@ -19,9 +19,11 @@ import { AppRoutingModule } from './app-routing.module';
 import * as Sentry from "@sentry/browser";
 
 console.log('say hello to Sentry object in src/app/app.module.ts', Sentry)
+console.log('release #', environment.sentry.release)
 
 Sentry.init({
-  dsn: environment.sentry.dsn
+  dsn: environment.sentry.dsn,
+  release: environment.sentry.release
 });
 
 @Injectable()
