@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   }
   // this commit did it
   suspectCommitInterference() {
+    throw new Error(`This line throwing error first. Which commit was I in? Stacktrace?`) 
     const message = `
       Math function didn't come close to running.
       It errored before the inputs could get evaluated as string vs number.
