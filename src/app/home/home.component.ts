@@ -27,23 +27,25 @@ export class HomeComponent implements OnInit {
     let x = {}
     return x['y']['z']
   }
-
+  // this commit did it
   suspectCommitInterference() {
     const message = `
-      Math function didn't come close to running!
+      Math function didn't come close to running.
       It errored before the inputs could get evaluated as string vs number.
       Some rogue code may have caused this.
       Click OK to close this and the error will get sent to Sentry.
       Login to your sentry.io and see if its linked to a suspect commit and release`
     window.alert(message)
-    throw new Error(`Error thrown by code from a new commit. Which commit was I in? Stacktrace?`) 
+    throw new Error(`Error thrown by code from a commit. Which commit was I in? Stacktrace?`) 
   }
 
   // Sentry - Runtime error deliberately thrown and captured by Sentry
   submit() {
     const value1 = parseInt(this.value1)
     const value2 = parseInt(this.value2)
+    
     return this.suspectCommitInterference();
+
     if (isNaN(value1) || isNaN(value2)) {
       this.output = '?'
       this.setErrorText(true, false)
