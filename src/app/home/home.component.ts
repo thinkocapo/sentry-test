@@ -25,9 +25,9 @@ export class HomeComponent implements OnInit {
   doTheImpossible() {
     this.setErrorText(false, true)
     let x = {}
-    return x['y']['z']
+    return x['y']['z']['other']
   }
-  // this commit did it
+  // test commit
   suspectCommitInterference() {
     throw new Error(`This line throwing error first. Which commit was I in? Stacktrace?`) 
     const message = `

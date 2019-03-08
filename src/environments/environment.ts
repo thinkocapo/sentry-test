@@ -16,7 +16,7 @@ export const environment = {
   ],
   sentry: {
     dsn: 'https://411481aa537343f1b10ae4b13df52608@sentry.io/1397009',
-    release: "sentry-test@0.0.1"
+    release: "sentry-test@0.0.3"
   }
 };
 
